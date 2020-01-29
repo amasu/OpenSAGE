@@ -870,7 +870,9 @@ namespace OpenSage
             }
 
             // TODO: What is the order?
-            Scene3D?.LogicTick(frame, MapTime);
+            // TODO: Calculate time correctly.
+            var timeInterval = new TimeInterval(MapTime.TotalTime, TimeSpan.FromMilliseconds(LogicUpdateInterval));
+            Scene3D?.LogicTick(frame, timeInterval);
 
             CurrentFrame += 1;
         }
