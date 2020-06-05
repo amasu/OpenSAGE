@@ -94,7 +94,6 @@ namespace OpenSage.Logic
                 if (ctrlDown)
                 {
                     // TODO: Check whether clicked point is an object, or empty ground.
-                    unit.OnLocalAttack(Game.Audio);
                     if (_worldObject != null)
                     {
                         var objectId = Game.Scene3D.GameObjects.GetObjectId(_worldObject);
@@ -113,7 +112,6 @@ namespace OpenSage.Logic
                     {
                         var objectId = Game.Scene3D.GameObjects.GetObjectId(_worldObject);
 
-                        unit.OnLocalAttack(Game.Audio);
                         order = Order.CreateAttackObject(Game.Scene3D.GetPlayerIndex(Game.Scene3D.LocalPlayer), (uint) objectId, false);
                     }
                     else
