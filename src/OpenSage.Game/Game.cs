@@ -56,9 +56,9 @@ namespace OpenSage
 
         public InputMessageBuffer InputMessageBuffer { get; }
         
-        public LobbyManager LobbyManager { get; }
-
         public SkirmishManager SkirmishManager { get; }
+
+        public LobbyManager LobbyManager { get; }
 
         internal List<GameSystem> GameSystems { get; }
 
@@ -451,7 +451,7 @@ namespace OpenSage
                 _mapTimer.Reset();
 
                 LobbyManager = new LobbyManager(this);
-                SkirmishManager = new SkirmishManager(this);
+                SkirmishManager = new SkirmishManager(this);                
 
                 IsRunning = true;
                 IsLogicRunning = true;
